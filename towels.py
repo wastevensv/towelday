@@ -2,26 +2,29 @@ import markovify
 import sqlite3
 
 def addcount():
-    con = sqlite3.connect("pasta.db")
+    con = sqlite3.connect("counter.db")
     c = con.cursor()
-    c.execute("UPDATE counter SET int = int + 1")
+    try:
+        c.execute("UPDATE counter SET int = int + 1")
+    except sqlite3.Error as er:
+        print(er)
     con.commit()
     con.close()
 
-def generate(s=2):
-    with open('corpus.txt') as f:
+def generate(s=2, corpus="full"):
+    with open('corpus/'+corpus+'.txt') as f:
         text = f.read()
     model = markovify.Text(text)
     gen = ''
     for i in range(s):
-    	sentence = model.make_sentence()
-    	if sentence != None:
-    		gen += sentence
+        sentence = model.make_sentence()
+        if sentence != None:
+            gen += sentence
     addcount()
     return gen
 
-def generate_sentence(char=140):
-    with open('corpus.txt') as f:
+def generate_sentence(char=140, corpus="full"):
+    with open('corpus/'+corpus+'.txt') as f:
         text = f.read()
     model = markovify.Text(text)
     addcount()

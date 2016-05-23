@@ -1,39 +1,42 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Emojipasta</title>
+		<title>Towel Generator</title>
         <link rel="stylesheet" href="style.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
         function gen_s(){
-            $.get("gen/s/112", function(data){
+            $.get("gen/s/107", function(data){
                 $("#main").html(data);
-				$("#tweet-button").attr('href', 'https://twitter.com/intent/tweet?text=' + data + '%0Avia http://emojipasta.club');
+				$("#tweet-button").attr('href', 'https://twitter.com/intent/tweet?text=' + data + '%0Avia http://towel.labs.wasv.me/');
             });
 
         }
 
 		function update_counter(){
-			//get shitpost count
+			//get towel count
 			$.get("gen/c/", function(data){
 				$("#counter").html(data);
 			});
 		}
 
-		setInterval(update_counter, 1000);
+		setInterval(update_counter, 2500);
         gen_s();
 		update_counter();
         </script>
     </head>
     <body>
-        <div id="title">emojipasta.club</div>
+        <div id="title">Towel Generator</div>
         <div id="main" class="emoji-text">
         </div>
         <div id="controls">
-            <input type="button" class="button" onclick="gen_s();" value="new shitpost" />
+            <input type="button" class="button" onclick="gen_s();" value="new towel" />
             <a id="tweet-button" class="button" target="_blank">tweet</a>
         </div>
-		<div id="shitpost-count"><span id="counter">0</span> shitposts generated</div>
-		<div id="footer"><a href="https://github.com/ntratcliff/emojipasta.club#api" target="_blank">API Reference</a> | <a href="https://github.com/ntratcliff/emojipasta.club" target="_blank">GitHub</a></div>
+        <div id="footer">
+		    <div><span id="counter">0</span> towels generated</div>
+		    <div id="links"><a href="https://github.com/wastevensv/towelday#api" target="_blank">API Reference</a> | <a href="https://github.com/wastevensv/towelday" target="_blank">GitHub</a></div>
+            <div id="credits">Based on <a href="http://emojipasta.club/">emojipasta.club</a> by <a href="https://github.com/ntratcliff">ntratcliff</a>.</div>
+        </div>
     </body>
 </html>

@@ -1,5 +1,5 @@
 body{
-    background-color: #f0f8ff;
+    background-color:#999999;
     font-family: Helvetica, sans-serif;
 }
 
@@ -11,31 +11,24 @@ body{
 }
 
 #main{
-    background-color:#ffffff;
+    background-color:#666666;
+    color:#000099;
     max-width: 800px;
-    margin: 0 auto 2.3em;
-    border-radius: 12px;
+    min-height: 60px;
+    margin: 0 auto 1em;
     padding: 0.6em 0.8em;
     font-size: 1.2em;
     text-align: center;
-	box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+	box-shadow: 3px 3px 6px #0000AA;
 }
 
 #controls{
     text-align: center;
 }
 
-#shitpost-count{
-	position: absolute;
-	bottom: 1.4em;
-	width: 100%;
-	text-align: center;
-}
-
 #footer{
-	position: absolute;
-	bottom: 0.2em;
-	width: 100%;
+	margin-top: 1em;
+    display: block;
 	text-align: center;
 	font-size: 0.8em;
 }
@@ -50,22 +43,24 @@ body{
     font-size: 1.6em;
     padding: 0.4em;
 	margin: 0 0.4em;
-    background-color: #a4d4ff;
+    background-color:#666666;
+    color:#000099;
 	user-select: none;
 	border: none;
 }
 
+a{
+    color:#000099;
+    text-decoration: none;
+}
+
 a.button:link, a.button:visited{
 	text-decoration:none;
-	color: #000;
+    color:#000099;
 }
 
-.button:hover{
-    background-color: #bfe0ff;
-}
-
-.button:active{
-    background-color: #9fcef7;
+.button:hover, .button:active{
+    background-color:#777777;
 }
 
 @media screen and (max-width: 570px){
