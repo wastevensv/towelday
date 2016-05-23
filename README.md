@@ -1,5 +1,5 @@
 # TowelDay
-A system for generating sentences similar to those from the hitchhikers series of books. Based on the TowelDay service.
+A system for generating sentences similar to those from the hitchhikers series of books. Based on the emojipasta.club service.
 
 # How it works
 TowelDay uses [Markovify](https://github.com/jsvine/markovify) to generate a text model from a corpus of text from the Hitchhikers novels by Douglas Adams.
