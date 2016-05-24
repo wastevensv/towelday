@@ -7,6 +7,13 @@ body{
     font-size: 5em;
     margin:0 auto;
     text-align:center;
+    padding: 0 0 0 0;
+}
+
+#subtitle{
+    font-size: 1.25em;
+    margin:0 auto;
+    text-align:center;
     padding: 0 0 0.3em 0;
 }
 
@@ -67,4 +74,7 @@ a.button:link, a.button:visited{
 	#title{
 		font-size: 3em;
 	}
+    #subtitle{
+        font-size: 0.75em;
+    }
 }

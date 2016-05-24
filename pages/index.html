@@ -6,9 +6,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
         function gen_s(){
-            $.get("gen/s/107", function(data){
+            $.get("gen/s/100", function(data){
                 $("#main").html(data);
-				$("#tweet-button").attr('href', 'https://twitter.com/intent/tweet?text=' + data + '%0Avia http://towel.labs.wasv.me/');
+				$("#tweet-button").attr('href', 'https://twitter.com/intent/tweet?text=' + data + '%0A%23towelday%20-%20http://towel.labs.wasv.me');
             });
 
         }
@@ -27,6 +27,10 @@
     </head>
     <body>
         <div id="title">Towel Generator</div>
+        <div id="subtitle">
+            Quotes not entirely unlike those found in
+            <a href="https://en.wikiquote.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy">The Guide</a>.
+        </div>
         <div id="main" class="emoji-text">
         </div>
         <div id="controls">
@@ -35,8 +39,13 @@
         </div>
         <div id="footer">
 		    <div><span id="counter">0</span> towels generated</div>
-		    <div id="links"><a href="https://github.com/wastevensv/towelday#api" target="_blank">API Reference</a> | <a href="https://github.com/wastevensv/towelday" target="_blank">GitHub</a></div>
-            <div id="credits">Based on <a href="http://emojipasta.club/">emojipasta.club</a> by <a href="https://github.com/ntratcliff">ntratcliff</a>.</div>
+		    <div id="links">
+                <a href="https://github.com/wastevensv/towelday#api" target="_blank">API Reference</a> | <a href="https://github.com/wastevensv/towelday" target="_blank">GitHub</a>
+            </div>
+            <div id="credits">
+                Based on <a href="http://emojipasta.club/">emojipasta.club</a> by <a href="https://github.com/ntratcliff">ntratcliff</a>.<br>
+                Modified by <a href="http://www.wastevensv.com/">William A Stevens V</a>
+            </div>
         </div>
     </body>
 </html>
