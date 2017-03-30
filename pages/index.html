@@ -13,16 +13,7 @@
 
         }
 
-		function update_counter(){
-			//get towel count
-			$.get("gen/c/", function(data){
-				$("#counter").html(data);
-			});
-		}
-
-		setInterval(update_counter, 2500);
         gen_s();
-		update_counter();
         </script>
     </head>
     <body>
@@ -38,7 +29,6 @@
             <a id="tweet-button" class="button" target="_blank">tweet</a>
         </div>
         <div id="footer">
-		    <div><span id="counter">0</span> towels generated</div>
 		    <div id="links">
                 <a href="https://github.com/wastevensv/towelday#api" target="_blank">API Reference</a> | <a href="https://github.com/wastevensv/towelday" target="_blank">GitHub</a>
             </div>

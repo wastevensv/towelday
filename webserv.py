@@ -1,5 +1,4 @@
 from flask import Flask, request, send_from_directory
-import sqlite3
 import towels
 app = Flask(__name__)
 
@@ -25,18 +24,7 @@ def generate_sentence(char, corpus):
     sentence = towels.generate_sentence(char, corpus)
     if sentence is None:
         return ''
-    return sentence 
-
-@app.route('/gen/c/')
-def get_count():
-    con = sqlite3.connect('counter.db')
-    c = con.cursor()
-    try:
-        c.execute("SELECT * FROM counter")
-        count = c.fetchone()[0]
-    except Exception as e:
-        print(e)
-    return str(count)
+    return sentence
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=22109)
