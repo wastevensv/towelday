@@ -1,5 +1,6 @@
 import markovify
 import sqlite3
+import codecs
 
 def addcount():
     con = sqlite3.connect("counter.db")
@@ -12,7 +13,7 @@ def addcount():
     con.close()
 
 def generate(s=2, corpus="full"):
-    with open('corpus/'+corpus+'.txt') as f:
+    with codecs.open('corpus/'+corpus+'.txt', 'r', 'utf-8') as f:
         text = f.read()
     model = markovify.Text(text)
     gen = ''
@@ -24,7 +25,7 @@ def generate(s=2, corpus="full"):
     return gen
 
 def generate_sentence(char=140, corpus="full"):
-    with open('corpus/'+corpus+'.txt') as f:
+    with codecs.open('corpus/'+corpus+'.txt', 'r', 'utf-8') as f:
         text = f.read()
     model = markovify.Text(text)
     addcount()
