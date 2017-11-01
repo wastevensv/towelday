@@ -11,7 +11,7 @@ followed by [this file](http://www.textfiles.com/stories/hitch2.txt) and [this f
 Sadly, I have only found the first three books in the trilogy. If anyone knows where to find plaintext version of the others, I'll add them to the corpus, and link to them above.
 
 # API
-TowelDay exposes two RESTful API endpoints, at `http://towel.labs.wasv.me/gen/` and `http://towel.labs.wasv.me/gen/s/` respectively.
+TowelDay exposes two RESTful API endpoints, at `http://towel.wasv.me/gen/` and `http://towel.wasv.me/gen/s/` respectively.
 
 #### /gen/
 `/gen/<int:num>/<string:corpus>/` produces a block of text of the specified sentence length. If no length is provided, the default length of 2 is used.
